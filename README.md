@@ -1,7 +1,7 @@
 # raylib_basic_demo
 Raylib window without the annoying title bar flickering when it start
 
-[https://github.com/raysan5/raylib/wiki/Working-on-Windows](https://github.com/raysan5/raylib/wiki/Working-on-Windows#manual-setup-with-w64devkit)
+https://github.com/raysan5/raylib/wiki/Working-on-Windows#manual-setup-with-w64devkit
 
     raylib-5.5_win64_mingw-w64.zip
 
