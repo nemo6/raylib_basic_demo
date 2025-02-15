@@ -4,7 +4,7 @@ Raylib window without the annoying title bar flickering when it start
 https://github.com/raysan5/raylib/wiki/Working-on-Windows#manual-setup-with-w64devkit
 ```
 C:\w64devkit\bin
-Modifier les variables d\'environnement système
+Modifier les variables d'environnement système
 PATH
 ```
 
