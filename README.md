@@ -16,6 +16,7 @@ https://github.com/raysan5/raylib/releases/
 @echo off
 set arg=%~1
 gcc -o %arg%.exe %arg%.c -mwindows -lraylib -lgdi32 -lwinmm
+%arg%.exe
 ```
 
 ```
