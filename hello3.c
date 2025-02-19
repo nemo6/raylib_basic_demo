@@ -53,7 +53,9 @@ int main(void)
 	char text3[50];
 	char text[1024];
 
-	SetWindowOpacity(0.0f);
+	float counter_opacity = 0.0f;
+
+	SetWindowOpacity( counter_opacity );
 
 	while ( /*running*/ /*||*/ !WindowShouldClose() ) {
 
@@ -72,14 +74,17 @@ int main(void)
 			SetWindowPosition( screenWidth/2-(windowWidth/2) , screenHeight/2-(windowHeight/2) );
 		}
 
-		if ( counter_timer == 0 )
-		SetWindowOpacity(1.0f);
+		/*if ( counter_timer == 0 )
+		SetWindowOpacity(counter_opacity);*/
 
-		/*if( timer == 0.0f && timer <= 0.09f ){
+		// SetWindowPosition( position.x+5 , position.y+5 );
 
-			SetWindowPosition( position.x+5 , position.y+5 );
+		if( timer <= 5.0f ){
+			
+			counter_opacity += 0.1f;
+			SetWindowOpacity(counter_opacity);
 
-		}*/
+		}
 
 		int n = add( 5, 5 , global_count );
 
@@ -101,7 +106,7 @@ int main(void)
 
 		//
 
-		DrawText( text, x, ( GetScreenHeight() - textHeight ) / 2 - fontSize / 2 , fontSize, BLACK );
+		DrawText( text, x, ( GetScreenHeight() - textHeight ) / 2 - fontSize / 2 , fontSize, BLACK /*RAYWHITE*/ );
 
 		/*if ( timer >= 4.0f && timer <= 4.01f ) {
 			
@@ -115,7 +120,7 @@ int main(void)
 		}*/
 
 		BeginDrawing();
-		ClearBackground( RAYWHITE );
+		ClearBackground( RAYWHITE /*BLACK*/ );
 
 		/*position = GetWindowPosition();
 		sprintf( text1, "Window Position: (%d, %d)", (int)position.x, (int)position.y );
