@@ -18,23 +18,18 @@ int main(void)
 
 	float timer = 0.0f;
 
-	SetConfigFlags(FLAG_WINDOW_UNDECORATED);
-	// SetConfigFlags(FLAG_WINDOW_HIDDEN);
+	SetConfigFlags( FLAG_WINDOW_UNDECORATED );
 
 	InitWindow( raylibWindowWidth, raylibWindowHeight, "Hello" );
-	// SetWindowPosition( position.x , position.y );
 
 	int screenWidth = GetMonitorWidth(GetCurrentMonitor());
 	int screenHeight = GetMonitorHeight(GetCurrentMonitor());
 
-	/*int windowWidth = GetScreenWidth();
-	int windowHeight = GetScreenHeight();*/
+	// int windowWidth = GetScreenWidth();
+	// int windowHeight = GetScreenHeight();
 
 	int windowWidth = 600;
 	int windowHeight = 600;
-	/*InitWindow( windowWidth, windowHeight, "Your Window Title" );*/
-
-	// SetWindowPosition( (screenWidth - windowWidth) / 4, (screenHeight - windowHeight) / 4);
 
 	bool running = true;
 	// char text[] = "Congrats! You created your first window!";
@@ -44,8 +39,6 @@ int main(void)
 
 	// sprintf( text, "Value: %d,%d", position.x, position.y );
 	// sprintf( text, "Value: %d,%d", 5 , 5 );
-
-	// when window move, print new text position
 
 	SetTargetFPS(60);
 
@@ -60,9 +53,7 @@ int main(void)
 	char text3[50];
 	char text[1024];
 
-	Vector2 fullscreen;
-
-	// SetWindowOpacity(0.2f);
+	SetWindowOpacity(0.0f);
 
 	while ( /*running*/ /*||*/ !WindowShouldClose() ) {
 
@@ -80,6 +71,9 @@ int main(void)
 			position = GetWindowPosition();
 			SetWindowPosition( screenWidth/2-(windowWidth/2) , screenHeight/2-(windowHeight/2) );
 		}
+
+		if ( counter_timer == 0 )
+		SetWindowOpacity(1.0f);
 
 		/*if( timer == 0.0f && timer <= 0.09f ){
 
@@ -143,4 +137,5 @@ int main(void)
 	CloseWindow();
 
 	return 0;
+
 }
